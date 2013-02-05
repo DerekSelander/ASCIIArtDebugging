@@ -1,12 +1,12 @@
 //
-//  UIImageView+ASCIIConverter.m
-//  ASCII
+//  UIImage+ASCIIConverter.m
+//  ASCIIArtDebugging
 //
-//  Created by Derek Selander on 8/26/12.
-//  Copyright (c) 2012 Derek Selander. All rights reserved.
+//  Created by Derek Selander on 2/4/13.
+//  Copyright (c) 2013 Derek Selander. All rights reserved.
 //
 
-#import "UIImageView+ASCIIConverter.h"
+#import "UIImage+ASCIIConverter.h"
 
 typedef enum {
     ALPHA = 0,
@@ -27,18 +27,17 @@ typedef enum {
 static ASCIIImageType asciiDebugType = ASCIIImageTypeDebugOnly;
 static NSString * characterMap = @"#@8%Oo\";,'. ";
 
-@implementation UIImageView (ASCIIConverter)
-
+@implementation UIImage (ASCIIConverter)
 //****************************************************************
 #pragma mark - Public Methods
 //****************************************************************
 
 - (NSString *)description
 {
-    NSMutableString *ASCIIString = [NSMutableString stringWithCapacity:self.image.size.width * self.image.size.height];
+    NSMutableString *ASCIIString = [NSMutableString stringWithCapacity:self.size.width * self.size.height];
     [ASCIIString appendString:[super description]];
     
-    if (!self.image) {
+    if (!self) {
         [ASCIIString appendString:@"Image is nil!"];
         return ASCIIString;
     } else if (asciiDebugType == ASCIIImageTypeBoth ||
@@ -47,15 +46,15 @@ static NSString * characterMap = @"#@8%Oo\";,'. ";
         [ASCIIString appendString:[self convertToASCII]];
         [ASCIIString appendString:@"\n"];
     }
-
+    
     return (NSString *)ASCIIString;
 }
 
 - (NSString *)debugDescription
 {
-    NSMutableString *ASCIIString = [NSMutableString stringWithCapacity:self.image.size.width * self.image.size.height];
+    NSMutableString *ASCIIString = [NSMutableString stringWithCapacity:self.size.width * self.size.height];
     [ASCIIString appendString:[super description]];
-    if (!self.image) {
+    if (!self) {
         [ASCIIString appendString:@"Image is nil!"];
         return ASCIIString;
     } else if (asciiDebugType == ASCIIImageTypeBoth ||
@@ -64,7 +63,7 @@ static NSString * characterMap = @"#@8%Oo\";,'. ";
         [ASCIIString appendString:[self convertToASCII]];
         [ASCIIString appendString:@"\n"];
     }
-
+    
     return (NSString *)ASCIIString;
 }
 
@@ -119,12 +118,12 @@ static NSString * characterMap = @"#@8%Oo\";,'. ";
 
 -(UIImage*)resizedImageToSize:(CGSize)dstSize
 {
-	CGImageRef imgRef = self.image.CGImage;
+	CGImageRef imgRef = self.CGImage;
 	// the below values are regardless of orientation : for UIImages from Camera, width>height (landscape)
 	CGSize  srcSize = CGSizeMake(CGImageGetWidth(imgRef), CGImageGetHeight(imgRef)); // not equivalent to self.size (which is dependant on the imageOrientation)!
     
 	CGFloat scaleRatio = dstSize.width / srcSize.width;
-	UIImageOrientation orient = self.image.imageOrientation;
+	UIImageOrientation orient = self.imageOrientation;
 	CGAffineTransform transform = CGAffineTransformIdentity;
 	switch(orient) {
             
@@ -199,10 +198,10 @@ static NSString * characterMap = @"#@8%Oo\";,'. ";
 
 -(UIImage*)resizedImageToFitInSize:(CGSize)boundingSize scaleIfSmaller:(BOOL)scale
 {
-	CGImageRef imgRef = self.image.CGImage;
-	CGSize srcSize = CGSizeMake(CGImageGetWidth(imgRef), CGImageGetHeight(imgRef)); 
+	CGImageRef imgRef = self.CGImage;
+	CGSize srcSize = CGSizeMake(CGImageGetWidth(imgRef), CGImageGetHeight(imgRef));
     
-	UIImageOrientation orient = self.image.imageOrientation;
+	UIImageOrientation orient = self.imageOrientation;
 	switch (orient) {
 		case UIImageOrientationLeft:
 		case UIImageOrientationRight:
@@ -218,7 +217,7 @@ static NSString * characterMap = @"#@8%Oo\";,'. ";
 	CGSize dstSize;
     
 	if ( !scale && (srcSize.width < boundingSize.width) && (srcSize.height < boundingSize.height) ) {
-		dstSize = srcSize; 
+		dstSize = srcSize;
 	} else {
 		CGFloat wRatio = boundingSize.width / srcSize.width;
 		CGFloat hRatio = boundingSize.height / srcSize.height;
@@ -229,7 +228,7 @@ static NSString * characterMap = @"#@8%Oo\";,'. ";
 			dstSize = CGSizeMake(floorf(srcSize.width * hRatio), boundingSize.height);
 		}
 	}
-
+    
 	return [self resizedImageToSize:dstSize];
 }
 

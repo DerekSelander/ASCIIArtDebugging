@@ -19,6 +19,7 @@
 		A65AAB7916BDC6AB00B0ED6A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65AAB7716BDC6AB00B0ED6A /* MainStoryboard_iPhone.storyboard */; };
 		A65AAB7C16BDC6AB00B0ED6A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65AAB7A16BDC6AB00B0ED6A /* MainStoryboard_iPad.storyboard */; };
 		A65AAB8E16BDCF7A00B0ED6A /* UIImageView+ASCIIConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A65AAB8616BDC6EC00B0ED6A /* UIImageView+ASCIIConverter.m */; };
+		A6A45F1716C0EE0000A273B6 /* UIImage+ASCIIConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A45F1616C0EE0000A273B6 /* UIImage+ASCIIConverter.m */; };
 		A6C5172A16BF54280053B3C0 /* BigImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6C5172716BF54280053B3C0 /* BigImage.jpg */; };
 		A6C5172B16BF54280053B3C0 /* FuturamaMeme.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6C5172816BF54280053B3C0 /* FuturamaMeme.jpg */; };
 		A6C5172C16BF54280053B3C0 /* SmallImage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A6C5172916BF54280053B3C0 /* SmallImage.jpeg */; };
@@ -44,6 +45,8 @@
 		A65AAB7B16BDC6AB00B0ED6A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		A65AAB8516BDC6EC00B0ED6A /* UIImageView+ASCIIConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ASCIIConverter.h"; sourceTree = "<group>"; };
 		A65AAB8616BDC6EC00B0ED6A /* UIImageView+ASCIIConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ASCIIConverter.m"; sourceTree = "<group>"; };
+		A6A45F1516C0EE0000A273B6 /* UIImage+ASCIIConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ASCIIConverter.h"; sourceTree = "<group>"; };
+		A6A45F1616C0EE0000A273B6 /* UIImage+ASCIIConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ASCIIConverter.m"; sourceTree = "<group>"; };
 		A6C5172716BF54280053B3C0 /* BigImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = BigImage.jpg; path = ../BigImage.jpg; sourceTree = "<group>"; };
 		A6C5172816BF54280053B3C0 /* FuturamaMeme.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FuturamaMeme.jpg; path = ../FuturamaMeme.jpg; sourceTree = "<group>"; };
 		A6C5172916BF54280053B3C0 /* SmallImage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = SmallImage.jpeg; path = ../SmallImage.jpeg; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 		A65AAB8716BDC6EF00B0ED6A /* ASCIIArtDebuggingCategories */ = {
 			isa = PBXGroup;
 			children = (
+				A6A45F1516C0EE0000A273B6 /* UIImage+ASCIIConverter.h */,
+				A6A45F1616C0EE0000A273B6 /* UIImage+ASCIIConverter.m */,
 				A65AAB8516BDC6EC00B0ED6A /* UIImageView+ASCIIConverter.h */,
 				A65AAB8616BDC6EC00B0ED6A /* UIImageView+ASCIIConverter.m */,
 			);
@@ -219,6 +224,7 @@
 				A65AAB6C16BDC6AB00B0ED6A /* main.m in Sources */,
 				A65AAB7016BDC6AB00B0ED6A /* DSAppDelegate.m in Sources */,
 				A6C5173516BF6F3D0053B3C0 /* DSTableViewController.m in Sources */,
+				A6A45F1716C0EE0000A273B6 /* UIImage+ASCIIConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
