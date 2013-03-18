@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Asciiartdebugging by DerekSelander</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Asciiartdebugging</h1>
+        <p class="header">Overwrites UIImageView &amp; UIImage's description to print out the image in ASCII Art</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/DerekSelander/ASCIIArtDebugging/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/DerekSelander/ASCIIArtDebugging/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/DerekSelander/ASCIIArtDebugging">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/DerekSelander">DerekSelander</a></p>
+
+
+      </header>
+      <section>
+        <h1>ASCIIArtDebugging</h1>
+
+<p>ASCIIArtDebugging is a fun yet useful way to debug UIImage &amp; UIImageViews in order to see what gets passed around for
+the image at runtime.  Instead of just looking at the memory address or properties while debugging, ASCIIArtDebugging
+takes the image and creates an ASCIIArt image in your console. You can control if the image is displayed in the object's description</p>
+
+<p><code>NSLog("%@", imageView.image);</code></p>
+
+<p>Or can enable the image to be only printed while debugging</p>
+
+<p><code>po imageView.image</code></p>
+
+<p>Example input image:
+<img src="http://i0.kym-cdn.com/photos/images/original/000/131/399/fry.PNG?1307468855" alt="Fry Meme"></p>
+
+<p>Example console output:</p>
+
+<p><code>
+OOOOOOOOOOOOOO%8OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO8%OOOOO
+OOOOOOOOOOOO%8%%%OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO%%O%OOO
+OOOOOOOOOO%8%%O%%OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO%%8%OOOO
+OOOOOOOO%8%8%%%%OOOOOOOOOOOOOOOOOOO%%%OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO%%%%O%OO
+OOOOOO%8%%O%%OOOOOOOOOOOOOOOOOOOOO%%%%OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO%8%%OO
+OOOO%8%%%%%%8%O%OOOOOOOOOOOOOOOOOO%%8%%%%OO%%O%%OOOOOOOOOOOOOOOOOOOOOOOOOO%%%OOO
+OO%8%%O%%OOO%8O%OO%%%%%%OOOOOOOOOO%%%O8%%%OO%8%O%OOOOOOOOOOOOOOOOOOOOOOOO%%O8%%8
+%8%%%%OOOOOO%%%O%O%%%%O%OOOOOOOOOO%%%oo%%%%%%%%%OOOOOOOOOOOOOOOOOOOOOO%OOO%%8@88
+%%%%OOOOOOOO%%8%%O%8@88%%%OOOOOOOOOO%O"o%%%%%%o%%O%OOOOOOOOOOOOOOOOO%OO%%8888%%%
+OOOOOOOOOOOOOO%%OO8@88@8%%%OOOOOOOO%%%"""%%%%%O"O%%%OOOOOOOOOOOO%%OO%%8888%%%%%%
+%OOOOOOOOO%%%%%8%%%@888@8%%OOOOOOOO%O%o"""%%%%%""%%OOOOOOOOOO%%OO%%8888%%%%%%%%%
+OOOOOOOOOOO88%%%%OO%@888@%%%OOOOOOOOO%O"""o%%O%o""%%OOOOOO%OOO%%8888%%%%%%%%%%%%
+OOOOOOOOO%%@@8%%%%O%8@8888%%OOOOOOOOO%%""""o%%%%"""%%%OO%%O%%8888%%%%%%%%%%%%%%%
+OOOOOOOOOO%@8@%%%8O%%@888@%OOOOOOOOOOO%o""""o%%%""""%%%O%%8888%%%%%%%%%%%%%%%%%%
+OOOOOOOOOO%@888O%%%O%8@88@%%%%%%%%%%%O%O"""""O%%o"""o%%8888%%%%%%%%%%%%%%%%%%%%%
+OOOOOOOOOO%@88@%%%8%%%@@@8%OOOOOO%%%%%%O""""""%%O""""O@8%%%%%%%%%%%%%%%%%%%%%%%%
+OOOOOOOOOO%@8888O%%%OO8@O"""""""""""oO%O""""""o8O"""""%%%%%%%%%%%%%%%%%%%%%%%%%%
+OOOOOOOOO%%8@88@%O%%%%%o"""""""""""""""""""""""%O"""""O%%%%%%%%%%%%%%%%%%%%%%888
+OOOOOOOOOOO%@8888O%%8%o"""""""""""""""""""""""""""""""o8%%%%%%%%%%%%%%%%%%888%OO
+OOOOOOOOOO%%88@8@%%%%o"""""""""""""""""""""""""""""""""%%%%%%%%%%%%%%%%88%%OOOOO
+OOOOOOOOOO%%%Oo8@8O8o""""""""""""""""""""""""""""""""""%%%%%%%%%%%%888%%OOOOOOOO
+OOOOOOOOOOOO%%""O88O"""""""""""""""""""""""""""""""""""O%%%%%%%%888%OOOOOOOOOOOO
+OOOOOOOOOOOO%%O"""o""""""""""""""""""""""""""""""""""""o8%%%888%%OOOOOOOOOOOOOOO
+OOOOOOOOOOOO%%%""""""""""""""""""""""""""""""""""""""""o8888%OOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOO%%%""""""""""""""""""""""""""""""""""""""""o8%OOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOO%%%%%o"""""""""""oOOOOoo""""""""""""""""""""""o%OOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOO%%%o"""""""""""""O",,;;ooOOoo"""""""""""""""""O%OOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOO%%o""""""""""""""""O;''''',;"oOOOoo""""""""""""%OOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOO%%%o""""""""""""""""O;','',''',,;"oOOOoo""""""O%OOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOO%%8@8%o""""""""""ooo""O,','''''''''',,;ooOOOoo%%OOOOOOOOOOOOOOOOOOOOOOOOO
+O%%O%%8888%%%88o""""""""%ooOooo',''''''''''''''',,o8%OOOOOOOOOOOOOOOOOOOOOOOOOOO
+O%%%888%%%%%%%%""""""""""O,,"O%,'''''''''''''',',',%OOOOOOOOOOOOOOOOOOOOOOOOOOOO
+%888%%%%%%%%%8o"""""""""""O,',;,,''''''''''''''''''o%OOOOOOOOOOOOOOOOOOOOOOOOOOO
+8%%%%%%%%%%%%%""""""""""""oo',',,'''''''''''''''',,'"%OOOOOOOOOOOOOOOOOOOOOOOOOO
+%%%%%%%%%%%%%%"""""""""""""O;',''''''''''','',''''',,O%OOOOOOOOOOOOOOOOOOOOOOOOO
+%%%%%%%%%%%%8O""""""""""""""O,,''''''''''',,;,,''''';O%OOOOOOOOOOOOOOOOOOOOOOOOO
+%%%%%%%%%%%%8o""""""""""""""O;',,''''''''',,""',''',''"%OOOOOOOOOOOOOOOOOOOOOOOO
+%%%%%%%%%%888o""""""""""""""oo',,',,''''''','o;'''''''';%OOOOOOOOOOOOOOOOOOOOOOO
+%%%%%%888%%O%o"""""""""""""""O;',;,,''',',,,',o',,;"""";%OOOOOOOOOOOOOOOOOOOOOOO
+%%%888%OOOOO%o"""""""""""""""oo',o',;""oOo""""Oo"";,,8";OOOOOOOOOOOOOOOOOOOOOOOO
+88%%OOOOOOOO%o""""""""""""""""O,,o"";,',@o;;,'o,,;;""%o;O%OOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOO%O""""""""""""""""O,,O;;"""""";"""OO"";,,,,;OOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOO%""""""""""""""""O;'oo;,,''''''''oO"'''''',%OOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOO%%"""""""""oOOO""o"';o'',,'''''';"'"o,''''o%OOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOO%O"""""""O",,"O"oo',",,'''''''';,,'"o"";o8OOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOO%%"""""O",";'"ooo',',,''''''''',,,',;;""o%OOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO%%o"""O,oOoo,oo"''''''''''''''''''''''''"%OOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOO%%ooo,"o';;;%;'''''''''''''''''''''',',%OOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOO%%O',o,',,",,''''''''''''''''',''''';%OOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOO%;'"";,,',,''''''''''''''''',,;;;o%OOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOO,';",,'''''''''''''''''''',oo"""%OOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOO%O;',,,'''''''''''''''''''',,''''O%OOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOO%%O;''''''''''''''''''''''''''',%OOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOOOO%,,''''''''''''''''''''''''','"%OOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOOOO%"''''''''''''''''''''''''''','"%OOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOOOO%O''''''''''''''''''''''''''',,'"%OOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOOOOO%,''''''''''''''''''''''''''',,'o%OOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOOOOO%,''''''''''''''''''''''''''''''o%OOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOOOOO%,''''''''''''',,;;;;;;;;;;;"""o%OOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOOOOO%,''''''''''''''"o";;;;"8%%%%%%%OOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOOOOO%,''''''''''''',,'''''',%OOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOOOO88,'''''''''''''''''''';O%OOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOO%8%%;'''''''''''''''''''o%%OOOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOO8%%%,''''''''''''''''',o%OOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOO%%%%8,''''''''''''''','o%OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOO%8%%%%,'''''''''''''','"8OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOO%%%%%O''''''''''''''',,%8%OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOO%8%%%%O'''''''''''''','"%%8OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOO%88%%%%%'',''''''''''',,O%%%8OOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOO%8%%%%%%%8o,''''''''''','"%%%%8%OOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOO8%%%%%%%%%%O";''''''''',,,O%%%%%%OOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+</code></p>
+
+<p>ASCIIArtDebugging can accomidate different Xcode window console sizes as well as different types of image sizes and data types</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
