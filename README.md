@@ -6,8 +6,21 @@ ASCIIArtDebugging is a fun yet useful way to debug UIImage & UIImageViews in ord
 the image at runtime.  Instead of just looking at the memory address or properties while debugging, ASCIIArtDebugging
 takes the image and creates an ASCIIArt image in your console. 
 
-ASCIIArtDebugging can accomidate different Xcode window console sizes as well as different types of image sizes and data 
-types
+ASCIIArtDebugging can accomidate different Xcode window console sizes as well as different types of image sizes and data types. 
+
+You can adjust the <em>kMaxWidth</em> and <em>kMaxHeight</em> values to accomodate your appropriate screen size.
+
+ASCIIArtDebugging In Action
+===========================
+
+In the lldb console:<br>
+<code>(lldb) po image</code>  
+or<br> 
+<code>(lldb) po imageview</code>
+
+
+![Alt text](/ScreenShot.png?raw=true "ASCIIArt In Action")
+
 
 Install
 =======
