@@ -24,7 +24,7 @@ or<br>
 
 Install
 =======
-Simply place the category methods in your PCH file and compile your project. Feel free to adjust adjust free screen size in 
+Simply place the category methods in your PCH file and compile your project. Feel free to adjust adjust the screen size in 
 the .m files. You can also toggle to print out ascii art in debug mode only. i.e. Debug Only will display ascii art when 
 typing "po imageInstance" but would not display ascii art in NSLog("here is an image %@", imageInstance);
 
