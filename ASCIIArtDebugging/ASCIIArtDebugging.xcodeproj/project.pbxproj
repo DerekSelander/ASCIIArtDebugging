@@ -16,9 +16,8 @@
 		A65AAB7216BDC6AB00B0ED6A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A65AAB7116BDC6AB00B0ED6A /* Default.png */; };
 		A65AAB7416BDC6AB00B0ED6A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65AAB7316BDC6AB00B0ED6A /* Default@2x.png */; };
 		A65AAB7616BDC6AB00B0ED6A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65AAB7516BDC6AB00B0ED6A /* Default-568h@2x.png */; };
-		A65AAB7916BDC6AB00B0ED6A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65AAB7716BDC6AB00B0ED6A /* MainStoryboard_iPhone.storyboard */; };
-		A65AAB7C16BDC6AB00B0ED6A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65AAB7A16BDC6AB00B0ED6A /* MainStoryboard_iPad.storyboard */; };
 		A65AAB8E16BDCF7A00B0ED6A /* UIImageView+ASCIIConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A65AAB8616BDC6EC00B0ED6A /* UIImageView+ASCIIConverter.m */; };
+		A692994619B6CC3800FD265E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A692994519B6CC3800FD265E /* Main.storyboard */; };
 		A6A45F1716C0EE0000A273B6 /* UIImage+ASCIIConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A45F1616C0EE0000A273B6 /* UIImage+ASCIIConverter.m */; };
 		A6C5172A16BF54280053B3C0 /* BigImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6C5172716BF54280053B3C0 /* BigImage.jpg */; };
 		A6C5172B16BF54280053B3C0 /* FuturamaMeme.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6C5172816BF54280053B3C0 /* FuturamaMeme.jpg */; };
@@ -41,10 +40,9 @@
 		A65AAB7116BDC6AB00B0ED6A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A65AAB7316BDC6AB00B0ED6A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A65AAB7516BDC6AB00B0ED6A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A65AAB7816BDC6AB00B0ED6A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		A65AAB7B16BDC6AB00B0ED6A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		A65AAB8516BDC6EC00B0ED6A /* UIImageView+ASCIIConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ASCIIConverter.h"; sourceTree = "<group>"; };
 		A65AAB8616BDC6EC00B0ED6A /* UIImageView+ASCIIConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ASCIIConverter.m"; sourceTree = "<group>"; };
+		A692994519B6CC3800FD265E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A6A45F1516C0EE0000A273B6 /* UIImage+ASCIIConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ASCIIConverter.h"; sourceTree = "<group>"; };
 		A6A45F1616C0EE0000A273B6 /* UIImage+ASCIIConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ASCIIConverter.m"; sourceTree = "<group>"; };
 		A6C5172716BF54280053B3C0 /* BigImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = BigImage.jpg; path = ../BigImage.jpg; sourceTree = "<group>"; };
@@ -102,8 +100,7 @@
 				A65AAB8716BDC6EF00B0ED6A /* ASCIIArtDebuggingCategories */,
 				A65AAB6E16BDC6AB00B0ED6A /* DSAppDelegate.h */,
 				A65AAB6F16BDC6AB00B0ED6A /* DSAppDelegate.m */,
-				A65AAB7716BDC6AB00B0ED6A /* MainStoryboard_iPhone.storyboard */,
-				A65AAB7A16BDC6AB00B0ED6A /* MainStoryboard_iPad.storyboard */,
+				A692994519B6CC3800FD265E /* Main.storyboard */,
 				A6C5173316BF6F3D0053B3C0 /* DSTableViewController.h */,
 				A6C5173416BF6F3D0053B3C0 /* DSTableViewController.m */,
 				A65AAB6616BDC6AB00B0ED6A /* Supporting Files */,
@@ -204,8 +201,7 @@
 				A65AAB7216BDC6AB00B0ED6A /* Default.png in Resources */,
 				A65AAB7416BDC6AB00B0ED6A /* Default@2x.png in Resources */,
 				A65AAB7616BDC6AB00B0ED6A /* Default-568h@2x.png in Resources */,
-				A65AAB7916BDC6AB00B0ED6A /* MainStoryboard_iPhone.storyboard in Resources */,
-				A65AAB7C16BDC6AB00B0ED6A /* MainStoryboard_iPad.storyboard in Resources */,
+				A692994619B6CC3800FD265E /* Main.storyboard in Resources */,
 				A6C5172A16BF54280053B3C0 /* BigImage.jpg in Resources */,
 				A6C5172B16BF54280053B3C0 /* FuturamaMeme.jpg in Resources */,
 				A6C5172C16BF54280053B3C0 /* SmallImage.jpeg in Resources */,
@@ -237,22 +233,6 @@
 				A65AAB6916BDC6AB00B0ED6A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A65AAB7716BDC6AB00B0ED6A /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A65AAB7816BDC6AB00B0ED6A /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		A65AAB7A16BDC6AB00B0ED6A /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A65AAB7B16BDC6AB00B0ED6A /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

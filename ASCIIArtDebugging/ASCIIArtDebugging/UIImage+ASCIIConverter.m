@@ -10,7 +10,7 @@
 
 typedef enum {
     ALPHA = 0,
-    BLUE = 1,
+    BLUE  = 1,
     GREEN = 2,
     RED = 3
 } PIXELS;
@@ -21,8 +21,8 @@ typedef enum {
     ASCIIImageTypeBoth,
 } ASCIIImageType;
 
-#define kMaxWidth   250.0f  //Adjust for console width
-#define kMaxHeight  150.0f  //Adjust for console height
+#define kMaxWidth   75.0f  //Adjust for console width
+#define kMaxHeight  75.0f  //Adjust for console height
 //Adjust for printing type.  i.e. Log for NSLog(@"%@", imageView), po imageView in debugger
 static ASCIIImageType asciiDebugType = ASCIIImageTypeDebugOnly;
 static NSString * characterMap = @"#@8%Oo\";,'. ";
@@ -73,7 +73,7 @@ static NSString * characterMap = @"#@8%Oo\";,'. ";
 
 - (NSString *)convertToASCII {
     
-    UIImage *resizedImage = [self resizedImageToFitInSize:CGSizeMake(kMaxHeight, kMaxHeight) scaleIfSmaller:YES];
+    UIImage *resizedImage = [self resizedImageToFitInSize:CGSizeMake(kMaxWidth, kMaxHeight) scaleIfSmaller:YES];
     CGSize size = resizedImage.size;
     int width = size.width;
     int height = size.height;
